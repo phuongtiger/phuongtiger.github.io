@@ -1,0 +1,404 @@
+/* General */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}   
+
+div::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.clear {
+    clear: both;
+}
+
+.text-white {
+    color:#fff;
+}
+
+
+.mar_10{
+    margin: 10px 0;
+}
+
+.mar_15{
+    margin: 15px 0;
+}
+
+.col{
+    float: left;
+}
+
+.col-half{
+    width: 50%;
+}
+
+.col-full{
+    width: 100%;
+}
+
+.col-third{
+    width: 33.3333%;
+}
+
+
+/* main */
+/* Heading */
+#header {
+    height: 46px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav > li {
+    display: inline-block;
+}
+
+#nav li{
+    position: relative;
+}
+
+#nav > li > a{
+    text-transform: uppercase;
+}
+
+#nav li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 0 24px;
+    line-height: 46px;
+    display: block;
+}
+#nav .subnav li:hover,
+#nav > li:hover > a{
+    color: black;
+    background-color: #ccc;
+}
+
+
+
+#nav .subnav{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    list-style-type: none;
+    min-width: 160px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav .subnav a{
+    color: black;
+    line-height: 22px;
+    padding: 8px 16px;
+}
+
+#nav .down-icon {
+    font-size: 14px;
+}
+
+#header .search-button{
+    float: right;
+}
+
+#header .search-icon{
+    color: #fff;
+    line-height: 46px;
+    padding: 0 21px;
+}
+
+#header .search-button:hover {
+    background-color: red;
+    cursor: pointer;
+}
+/* SLide */
+#slider {
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    /*Animation slider*/
+    animation-name: roll;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+/*Create Varitable Animation slider*/
+@keyframes roll{
+    0%   {
+        background: url('/assets/img/chicago.jpg') no-repeat;
+        background-size: cover;
+    }
+    33%   {
+        background: url('/assets/img/la.jpg')no-repeat;
+        background-size: cover;
+    }
+    66%   {
+        background: url('/assets/img/ny.jpg')no-repeat;
+        background-size: cover;
+    }
+    100%   {
+        background: url('/assets/img/chicago.jpg')no-repeat;
+        background-size: cover;
+    }
+}
+/* Bug không hiển thị chữ */
+.text-newyork, 
+.text-los {
+    display: none;
+}
+
+#slider .text-content{
+    color: white;
+    position: absolute;
+    bottom: 0;
+    margin-left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    padding: 32px 12px;
+}
+
+#slider .text-heading{
+    font-weight: 1;
+}
+
+#slider .text-decription{
+    font-weight: 500;
+}
+
+/* Content */
+
+/* Content About */
+#content .content-section{
+    max-width: 800px;
+    padding: 64px 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .section-heading{
+    margin: 10px 0;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 4px;
+    font-weight: 100;
+}
+
+#content .section-sub-text{
+    margin: 15px 0;
+    text-align: center;
+    font-size: 15px;
+    font-style: italic;
+    opacity: 0.4;
+}
+
+#content .about-text{
+    font-size: 15px;
+    line-height: 22.5px;
+    text-align: justify;
+}
+
+#content .member-list{
+    padding: 32px 0;
+}
+
+#content .member-item{
+    text-align: center;
+}
+
+#content .member-name{
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+#content .member-img{
+    width: 154px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+/* Content TourDate */
+
+#tourdate{
+    background-color: #000;
+}
+
+#tourdate .line-ticket li{
+    padding: 8px 16px;
+    font-size: 15px;
+    border-bottom-color: #ccc;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    color: #757575;
+}
+
+#tourdate .line-ticket{
+    background-color: #fff;
+    margin-top: 40px;
+    list-style: none;
+}
+
+.line-ticket .sold-out {
+    background-color: #F44336;
+    color: #fff;
+    padding: 3px 8px;
+    margin-left: 16px;
+    line-height: 22.5px;
+}
+
+.line-ticket .number-ticket{
+    float: right;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.tour-places{
+    display: inline-block;
+    padding: 32px 8px;
+    margin-left: -16px;
+    margin-right: -16px;
+}
+
+.tour-places .tour-list {
+    padding: 0 8px;
+}
+
+.tour-places .tour-list img{
+    width: 100%;
+}
+
+.tour-places .tour-decription{
+    background-color: #fff;
+    padding: 0 16px;
+}
+ .tour-places .tour-name,
+ .tour-places .tour-date,
+ .tour-places .tour-info{
+    padding: 15px 0;
+    font-size: 15px;
+ }
+
+.tour-places .buy-btn{
+    margin: 0 0 16px;
+    background-color: #000;
+    color: #fff;
+    width: 110px;
+    height: 39px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.tour-places .buy-btn:hover{
+    opacity: 0.6;
+}
+
+/* .tour-places .buy-btn:active div{
+    background-color: #F44336;
+    height: 100px;
+    width: 100px;
+} */
+
+.contact-list {
+    padding: 32px 0;
+}
+
+.contact-list .contact-info{
+    display: block;
+    line-height: 27px;
+    font-size: 18px;
+}
+
+.contact-list .contact-sign {
+    display: block;
+    line-height: 1px;
+}
+
+.contact-list .contact-sign .list-sign {
+    margin: 0 -16px 8px -16px;
+    padding: 0px 8px;
+    display: block;
+}
+
+.icon-sign{
+    padding-right: 30px;
+}
+
+.feedback-list{
+    padding: 0 8px;
+    float: left;
+    width: 50%;
+}
+
+.feedback-list-massage .feedback-massage,
+.feedback-list .feedback{
+    padding: 8px 8px;
+    border-color: rgb(204, 204, 204);
+    border-style: solid;
+    border-width: 1px;
+    width: 100%;
+}
+
+.feedback-list-massage .feedback-massage{
+    width: 100%;
+}
+
+.contact-sign .send-btn{
+    background-color: #000;
+    color: #fff;
+    padding: 8px 16px;
+    margin: 16px 0;
+    text-transform: uppercase;
+    float: right;
+    font-size: 15px
+}
+
+.contact-sign .send-btn:hover{
+    opacity: 0.6;
+}
+
+#map img{
+    width: 100%;
+}
+
+/* Footer */
+#footer {
+    text-align: center;
+    padding: 64px 16px;
+    font-size: 15px;
+}
+
+.icon-footer{
+    font-size: 24px;
+    width: 21px;
+    opacity: 0.6;
+}
+
+.icon-footer:hover{
+    opacity: 0.4;;
+}
+
+#footer div{
+    opacity: 0.4;
+}
