@@ -1,3 +1,4 @@
+/* General */
 body {
   background: #fafafa;
   font-family: "Playfair Display", Georgia, serif;
@@ -8,6 +9,22 @@ a {
   text-decoration: none;
 }
 
+/* Animation */
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 2s ease;
+}
+
+.animate {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 3s ease;
+}
+
+/* Overlay */
+
 #overlay {
   position: fixed;
   top: 0;
@@ -15,12 +32,11 @@ a {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  /* Màu nền với độ mờ */
-  z-index: 0;
-  /* Đảm bảo lớp overlay hiển thị trên các phần tử khác */
+  z-index: 1;
   display: none;
-  /* Ẩn lớp overlay ban đầu */
 }
+
+/* text about */
 
 .about {
   color: #f0f0f0;
@@ -36,6 +52,23 @@ a {
   transform: translate(-50%, -50%);
   z-index: -1;
 }
+
+/* text service */
+.service {
+  color: #f0f0f0;
+  font-weight: 700;
+}
+
+.service h1 {
+  position: absolute;
+  left: 50%;
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 310px;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
 
 /* Header */
 
@@ -64,6 +97,7 @@ a {
   width: 6%;
   min-width: 70px;
   z-index: 1;
+  cursor: pointer;
 }
 
 #header .nav-bar .logo span {
@@ -101,6 +135,8 @@ a {
   z-index: 1;
   display: none;
   overflow-y: scroll;
+  transform: scale(0.1);
+  transition: all 0.5s ease;
 }
 
 #header .menu ul.menu-item {
@@ -116,14 +152,16 @@ a {
   padding: 17px 0;
 }
 
-#header .menu ul.menu-item li a{
+#header .menu ul.menu-item li a {
   color: #000;
 }
 
-#header .menu ul.menu-item li a:hover{
+#header .menu ul.menu-item li a:hover {
   color: #CA82F8;
   transition: 0.4s;
 }
+
+/* Menu close button */
 #header .menu .menu-close {
   width: 54px;
   height: 54px;
@@ -131,7 +169,7 @@ a {
   border-radius: 3px;
   background-color: #e4e4e4;
   cursor: pointer;
-  margin-left: 40px;
+  margin-left: 74%;
   margin-top: 10px;
 }
 
@@ -140,15 +178,39 @@ a {
   transition: 0.3s;
 }
 
-#header .menu .menu-close span::before {
-  content: "";
-  font-size: 10px;
+#header .menu .menu-close:hover span::before,
+#header .menu .menu-close:hover span::after {
+  background: #f2f2f2;
 }
+
+#header .menu .menu-close span::before {
+  position: absolute;
+  top: 36px;
+  right: 70px;
+  content: '';
+  background: #000;
+  width: 27px;
+  height: 2px;
+  transform: rotate(45deg);
+}
+
+#header .menu .menu-close span::after {
+  position: absolute;
+  top: 36px;
+  right: 70px;
+  content: '';
+  background: #000;
+  width: 27px;
+  height: 2px;
+  transform: rotate(-45deg);
+}
+
 
 #header .menu .menu-search {
   padding-top: 20px;
   padding-left: 40px;
 }
+
 
 input[type="text"] {
   font-family: "Karla", Arial, sans-serif;
@@ -176,7 +238,13 @@ input[type="text"]::placeholder {
   transform: translate(-6px, 4px);
 }
 
-#header .menu .menu-search button img{
+#header .menu .menu-search button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  transition: opacity 0.8s ease;
+}
+
+#header .menu .menu-search button img {
   width: 20px;
   height: 20px;
 }
@@ -257,7 +325,7 @@ input[type="text"]::placeholder {
 }
 
 .info-list-item .info-text .text-contact .contact-icon .icon {
-  width: 20px;
+  width: 25px;
   display: inline-block;
 }
 
@@ -287,4 +355,149 @@ input[type="text"]::placeholder {
   margin: 0;
   padding: 15px 20px;
   letter-spacing: 0.2em;
+}
+
+/* SERVICE */
+.container-service {
+  margin-top: 300px;
+}
+
+.service-box {
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.service-box .service-info {
+  flex-basis: 55%;
+}
+
+.service-info .s-info-tittle {
+  margin-bottom: 80px;
+}
+
+.service-info .s-info-tittle span {
+  padding-top: 90px;
+  display: block;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  color: #bfbfbf;
+  font-weight: 600;
+  font-family: "Karla", Arial, sans-serif;
+}
+
+.service-info .s-info-tittle h1 {
+  margin-top: 0;
+  font-size: 43px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+  color: #000;
+  position: relative;
+}
+
+.service-info .service-head {
+  position: absolute;
+  top: 20em;
+  left: -80px;
+}
+
+.service-info .service-head h1 {
+  font-family: "Karla", Arial, sans-serif;
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 1em;
+  transform-origin: left top 0;
+  position: relative;
+  transform: rotate(90deg);
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.service-info .service-head h1::after {
+  position: absolute;
+  top: 10px;
+  right: -55px;
+  content: '';
+  background: #000;
+  width: 50px;
+  height: 1px;
+}
+
+.service-info .s-info-list-content {
+  display: flex;
+}
+
+.s-info-list-content .s-content-left {
+  flex-basis: 50%;
+}
+
+.s-info-list-content .s-content-right .s-content-box,
+.s-info-list-content .s-content-left .s-content-box {
+  padding-top: 30px;
+}
+
+
+.s-info-list-content .s-content-right .s-content-box h3,
+.s-info-list-content .s-content-left .s-content-box h3 {
+  font-family: "Karla", Arial, sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.8);
+  padding-bottom: 18px;
+}
+
+.s-info-list-content .s-content-right .s-content-box ul li,
+.s-info-list-content .s-content-left .s-content-box ul li {
+  font-family: "Karla", Arial, sans-serif;
+  line-height: 1.8;
+  font-size: 20px;
+  font-weight: 400;
+  background: #fafafa;
+  color: gray;
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.s-info-list-content .s-content-right .s-content-box ul li::before,
+.s-info-list-content .s-content-left .s-content-box ul li::before {
+  content: '\2022';
+  color: #000;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+
+.s-info-list-content .s-content-right {
+  flex-basis: 50%;
+}
+
+
+.service-box .service-img {
+  padding-top: 28px;
+  flex-basis: 45%;
+}
+
+.service-box .service-img img {
+  width: 100%;
+}
+
+/* Button scrolling to the top */
+
+.button-scrolling .button {
+  display: flex;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  width: 65px;
+  height: 50px;
+}
+
+.button-scrolling .button img:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }
