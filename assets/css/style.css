@@ -185,8 +185,8 @@ a {
 
 #header .menu .menu-close span::before {
   position: absolute;
-  top: 36px;
-  right: 70px;
+  margin-top: 27px;
+  margin-left: 13px;
   content: '';
   background: #000;
   width: 27px;
@@ -196,8 +196,8 @@ a {
 
 #header .menu .menu-close span::after {
   position: absolute;
-  top: 36px;
-  right: 70px;
+  margin-top: 27px;
+  margin-left: 13px;
   content: '';
   background: #000;
   width: 27px;
@@ -250,13 +250,15 @@ input[type="text"]::placeholder {
 }
 
 /* Content */
+#content {
+  margin-bottom: 300px;
+}
 
 #content .content-info .info-list-item {
   margin-left: 10%;
   margin-right: 10%;
   padding-top: 50px;
   display: flex;
-  min-width: 1000px;
   justify-content: space-between;
 }
 
@@ -358,9 +360,6 @@ input[type="text"]::placeholder {
 }
 
 /* SERVICE */
-.container-service {
-  margin-top: 300px;
-}
 
 .service-box {
   display: flex;
@@ -484,6 +483,91 @@ input[type="text"]::placeholder {
 
 .service-box .service-img img {
   width: 100%;
+}
+
+/* Footer */
+
+#footer {
+  padding: 8em 0;
+}
+
+.container-footer {
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.container-footer .footer-box {
+  flex-basis: 32%;
+  margin-bottom: 5em;
+}
+
+
+.container-footer .footer-box .box-1 p,
+.container-footer .footer-box .box-3 p {
+  text-align: inherit !important;
+}
+
+#footer h2 {
+  color: #000;
+  letter-spacing: 1px;
+  font-weight: 300;
+  margin-bottom: 1.8em;
+  font-size: 37px;
+}
+
+#footer p {
+  font-family: "Karla", Arial, sans-serif;
+  line-height: 1.8;
+  font-size: 20px;
+  font-weight: 400;
+  background: #fafafa;
+  color: gray;
+  text-align: center;
+}
+
+/* Subscribe form */
+
+.subscribe .text-form {
+  border: none;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  background: #fafafa;
+  font-weight: 400;
+  margin-bottom: 5px;
+  border-radius: 30px;
+  width: 87%;
+  padding: 20px 20px 20px 20px;
+  height: 20px;
+  text-align: center;
+}
+
+.text-form:focus {
+  border: 3px solid #ca82f8;
+  transition: border .5s ease;
+}
+
+.subscribe .submit {
+  border: none;
+  font-size: 16px;
+  background: #ca82f8;
+  font-weight: 400;
+  margin-bottom: 5px;
+  border-radius: 30px;
+  width: 100%;
+  padding: 18px 0;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: 'Karla';
+  cursor: pointer;
+}
+
+div.subscribe input[type="text"]::placeholder {
+  width: 100%;
+  color: #808080;
+  font-size: 20px;
+  text-align: center;
 }
 
 /* Button scrolling to the top */

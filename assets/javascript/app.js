@@ -81,3 +81,6 @@ function scrollToTop() {
 
   window.requestAnimationFrame(step);
 }
+function goToHomePage() {
+  window.location.href = "index.html";
+}
