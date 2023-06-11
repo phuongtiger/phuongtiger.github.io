@@ -1,4 +1,3 @@
-
 //Open menu
 
 var overlay = document.getElementById('overlay');
@@ -12,10 +11,10 @@ menuToggle.addEventListener('click', function () {
   });
   overlay.style.display = 'block';
   menu.style.display = 'block';
-  setTimeout(function(){
+  setTimeout(function () {
     menu.style.transform = 'scale(1.1)';
   }, 100);
-  setTimeout(function(){
+  setTimeout(function () {
     menu.style.transform = 'scale(1)';
   }, 500);
   document.body.style.overflow = 'hidden';
@@ -23,10 +22,10 @@ menuToggle.addEventListener('click', function () {
 
 menu_close.addEventListener('click', function () {
   overlay.style.display = 'none';
-  setTimeout(function(){
+  setTimeout(function () {
     menu.style.transform = 'scale(0.1)';
   }, 100);
-  setTimeout(function(){
+  setTimeout(function () {
     menu.style.display = 'none';
   }, 500);
   document.body.style.overflow = 'auto';
@@ -49,7 +48,7 @@ window.addEventListener('scroll', function () {
 
   for (var i = 0; i < images.length; i++) {
     var imagePosition = images[i].getBoundingClientRect().top;
-    var windowHeight = window.innerHeight-200;
+    var windowHeight = window.innerHeight - 200;
 
     if (imagePosition <= windowHeight) {
       images[i].style.opacity = '1';
@@ -81,6 +80,67 @@ function scrollToTop() {
 
   window.requestAnimationFrame(step);
 }
-function goToHomePage() {
-  window.location.href = "index.html";
+function goToHomePage(href) {
+  window.location.href = href;
 }
+
+// Hover element
+
+var overlay_hover = document.querySelectorAll('.animate-hover-overlay');
+var button_hover = document.querySelectorAll('.animate-hover-button');
+
+// Lặp qua từng phần tử và gắn sự kiện hover
+for (var i = 0; i < overlay_hover.length; i++) {
+  overlay_hover[i].addEventListener("mouseenter", function () {
+    this.style.background = 'rgba(0, 0, 0, 0.5)';
+    var button = this.parentElement.querySelector('.animate-hover-button');
+    if (button) {
+      button.style.transform = 'scale(1.2)';
+    }
+  });
+  overlay_hover[i].addEventListener("mouseleave", function () {
+    this.style.background = 'rgba(0, 0, 0, 0)';
+    var button = this.parentElement.querySelector('.animate-hover-button');
+    if (button) {
+      button.style.transform = 'scale(1)';
+    }
+  });
+  button_hover[i].addEventListener("mouseenter", function () {
+    var overlay = this.closest('.work-box').querySelector('.animate-hover-overlay');
+    if (overlay) {
+      overlay.style.background = 'rgba(0, 0, 0, 0.5)';
+    }
+    this.style.transform = 'scale(1.2)';
+  });
+
+  button_hover[i].addEventListener("mouseleave", function () {
+    var overlay = this.closest('.work-box').querySelector('.animate-hover-overlay');
+    if (overlay) {
+      overlay.style.background = 'rgba(0, 0, 0, 0)';
+    }
+    this.style.transform = 'scale(1)';
+  });
+}
+
+// Click to change URL
+
+function clickToChange(href) {
+  window.location.href = href;
+}
+
+// slider
+
+var slider = document.querySelector('.b-box-list');
+var prevBtn = document.querySelector('.b-button-prev');
+var nextBtn = document.querySelector('.b-button-next');
+var currentIndex = 0;
+
+prevBtn.addEventListener('click', function () {
+  var sliderElements = document.querySelectorAll('.b-box-item');
+  slider.insertBefore(sliderElements[sliderElements.length-1], sliderElements[0]);
+});
+
+nextBtn.addEventListener('click', function () {
+  var sliderElements = document.querySelectorAll('.b-box-item');
+  slider.insertBefore(sliderElements[0], sliderElements[sliderElements.length]);
+});extBtn

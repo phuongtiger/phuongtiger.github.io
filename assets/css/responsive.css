@@ -14,9 +14,15 @@
     .service h1 {
         font-size: 250px;
     }
+
+    .work-box .w-box-list {
+        height: 100%;
+    }
 }
 
 @media (max-width: 879px) {
+
+    .work h1,
     .about h1 {
         font-size: 200px;
         transform: translate(-50%, -43%);
@@ -39,6 +45,11 @@
         display: none;
     }
 
+    .container-blog .blog-main{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     .container-footer {
         flex-direction: column;
     }
@@ -53,7 +64,6 @@
         margin-left: 20%;
         margin-right: 0px;
     }
-
     .content-info .info-list-item .info-text .text-script {
         padding-left: 60px;
     }
@@ -61,9 +71,49 @@
     .content-info .info-list-item .info-text {
         font-size: 50px;
     }
+    .container-service{
+        padding-bottom: 200px;
+        margin-bottom: 0;
+    }
+    .container-work{
+        padding-bottom: 100px;
+    }
+    .container-work .work-head {
+        display: none;
+    }
+
+    .work-box .overlay-work-box,
+    .work-box .w-box-list {
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .w-box-list .w-list-item span {
+        font-size: 25px;
+        padding: 25px 30px;
+    }
+    .work-detail .w-detail-text{
+        padding: 0;
+    }
+    .blog h1{
+        font-size: 250px;
+    }
+    .container-blog .blog-head{
+        display: none;
+    }
+    .container-blog .blog-main .b-box-list{
+        flex-direction: column;
+        width: 100%;
+    }
 }
 
 @media (max-width: 590px) {
+    .work h1 {
+        font-size: 80px;
+        transform: translate(-50%, -80%);
+    }
+
     .about h1 {
         font-size: 80px;
         transform: translate(-50%, 100%);
@@ -73,7 +123,10 @@
         font-size: 80px;
         transform: translate(-50%, 30%);
     }
-
+    .blog h1{
+        font-size: 80px;
+        padding-bottom: 20px;
+    }
     #content .content-info .info-list-item {
         margin-left: 5%;
         margin-right: 5%;
@@ -94,7 +147,9 @@
     #header .menu {
         width: 100%;
     }
-
+    .content-info .info-list-item .info-text .text-about p::after{
+        right: -160px;
+    }
 }
 
 @media (max-width: 400px) {
@@ -102,10 +157,12 @@
     .service-box {
         margin-left: 10%;
     }
-    #header .menu .menu-search{
+
+    #header .menu .menu-search {
         padding-left: 20px;
     }
-    #header .menu ul.menu-item{
+
+    #header .menu ul.menu-item {
         padding-left: 20px;
     }
 }

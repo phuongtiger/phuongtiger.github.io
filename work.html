@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+    <script src="./assets/javascript/app.js"></script>
+    <title>Work</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="overlay"></div>
+        <div id="header">
+            <div class="nav-bar">
+                <div class="logo" onclick="goToHomePage()">
+                    <span>Ph</span>
+                    <span>Ti</span>
+                </div>
+                <div class="menu-toggle">
+                    <img src="./assets/icon/menu.png" alt="">
+                </div>
+            </div>
+            <div class="menu">
+                <div class="menu-close">
+                    <span>
+                    </span>
+                </div>
+                <div class="menu-search">
+                    <input type="text" class="form-search" placeholder="Enter any key to search...">
+                    <button type="submit" class="button-search"><img src="./assets/icon/icon-search.png" alt=""></button>
+                </div>
+                <ul class="menu-item">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a style="color: #ca82f8;" href="#">Work</a></li>
+                    <li><a href="./blog/home.html">Blog</a></li>
+                    <li><a href="achievement.html">Achievement</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-work ">
+        <div class="work">
+            <h1>Works</h1>
+            <h2>Portfolio</h2>
+            <h3>My Project</h3>
+        </div>
+        <div class="work-head">
+            <h1>Portfolio</h1>
+        </div>
+        <div class="work-box animate">
+            <div class="w-box-list">
+                <div class="w-list-item">
+                    <div class="w-item-img">
+                        <img src="./assets/img/pomodoro-img.png" alt="">
+                    </div>
+                    <div class="w-item-view animate-hover-button">
+                        <span>View More</span>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay-work-box animate-hover-overlay"></div>
+        </div>
+        <div class="work-detail animate">
+            <div class="w-detail-title">
+                <h1>Pomodoro Tools</h1>
+            </div>
+            <div class="w-detail-text">
+                <p>If you want to stay focused for a while, try a tool of your own design. This tool is designed by me
+                    to optimize for programmers, please try it out and give me more opinions!</p>
+            </div>
+            <div onclick="clickToChange()" class="w-detail-button">
+                <button>Try this tool</button>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="container-footer">
+            <div class="footer-box">
+                <div class="box-1">
+                    <h2>Let's Talk</h2>
+                    <p>A person who passionate about technology pursuing the programming.</p>
+                    <p>
+                        <a href="">hhphuong465@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-box">
+                <div class="box-2">
+                    <h2>Lasted Blog</h2>
+                </div>
+            </div>
+            <div class="footer-box">
+                <div class="box-3">
+                    <h2>Newsletter</h2>
+                    <p>A person who passionate about technology pursuing the programming with the dream of creating
+                        value.</p>
+                    <div class="subscribe">
+                        <input type="text" placeholder="Enter Email address" class="text-form">
+                        <input type="submit" value="Subscribe" class="submit">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>© Copyright © 2023 All rights reserved | This template is made with <a href="">PhuongTiger</a>
+            <3 </p>
+    </div>
+    <div class="button-scrolling">
+        <div class="button">
+            <img src="./assets/icon/up-arrows.png" alt="" onclick="scrollToTop()">
+        </div>
+    </div>
+    <script src="./assets/javascript/app.js"></script>
+</body>
+
+</html>

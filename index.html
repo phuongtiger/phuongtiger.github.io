@@ -19,12 +19,12 @@
         <div id="overlay"></div>
         <div id="header">
             <div class="nav-bar">
-                <div class="logo" onclick="goToHomePage()">
+                <div class="logo" onclick="goToHomePage('index.html')">
                     <span>Ph</span>
                     <span>Ti</span>
                 </div>
                 <div class="menu-toggle">
-                    <img src="./assets/img/menu.png" alt="">
+                    <img src="./assets/icon/menu.png" alt="">
                 </div>
             </div>
             <div class="menu">
@@ -34,15 +34,16 @@
                 </div>
                 <div class="menu-search">
                     <input type="text" class="form-search" placeholder="Enter any key to search...">
-                    <button type="submit" class="button-search"><img src="./assets/img/icon-search.png" alt=""></button>
+                    <button type="submit" class="button-search"><img src="./assets/icon/icon-search.png"
+                            alt=""></button>
                 </div>
                 <ul class="menu-item">
-                    <li><a href="#">Home</a></li>
+                    <li><a style="color: #ca82f8;" href="#">Home</a></li>
                     <li><a href="service.html">Services</a></li>
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Tools</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="./blog/home.html">Blog</a></li>
+                    <li><a href="achievement.html">Achievements</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -76,18 +77,18 @@
                             <div class="contact-icon">
                                 <div class="icon">
                                     <a href="https://www.facebook.com/hoanghuy.phuong.12/"><img
-                                            src="./assets/img/facebook.png" alt=""></a>
+                                            src="./assets/icon/facebook.png" alt=""></a>
                                 </div>
                                 <div class="icon">
                                     <a href="https://www.linkedin.com/in/ho%C3%A0ng-huy-ph%C6%B0%C6%A1ng-596383258/"><img
-                                            src="./assets/img/linkedin.png" alt=""></a>
+                                            src="./assets/icon/linkedin.png" alt=""></a>
                                 </div>
                                 <div class="icon">
                                     <a href="https://www.youtube.com/@phuongtiger6731/featured"><img
-                                            src="./assets/img/youtube.png" alt=""></a>
+                                            src="./assets/icon/youtube.png" alt=""></a>
                                 </div>
                                 <div class="icon">
-                                    <a href="https://github.com/phuongtiger"><img src="./assets/img/github.png"
+                                    <a href="https://github.com/phuongtiger"><img src="./assets/icon/github.png"
                                             alt=""></a>
                                 </div>
                             </div>
@@ -142,7 +143,7 @@
                             <div class="s-content-box">
                                 <h3>2 - Language Skills</h3>
                                 <ul>
-                                    <li>Java Spring</li>
+                                    <li>Java</li>
                                     <li>C# / ASP.NET</li>
                                     <li>HTML / CSS / JavaScript</li>
                                     <li>C / C++</li>
@@ -166,12 +167,154 @@
                 </div>
             </div>
         </div>
+        <!-- Work -->
+        <div class="container-work">
+            <div class="work">
+                <h1>Works</h1>
+                <h2>Portfolio</h2>
+                <h3>My Project</h3>
+            </div>
+            <div class="work-head">
+                <h1>Portfolio</h1>
+            </div>
+            <div onclick="clickToChange('https://phuongtiger.github.io/Pomodoro-tools/')"
+                class="work-box animate-on-scroll">
+                <div class="w-box-list">
+                    <div class="w-list-item">
+                        <div class="w-item-img">
+                            <img src="./assets/img/pomodoro-img.png" alt="">
+                        </div>
+                        <div class="w-item-view animate-hover-button">
+                            <span>View More</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay-work-box animate-hover-overlay"></div>
+            </div>
+            <div class="work-detail">
+                <div class="w-detail-title">
+                    <h1>Pomodoro Tools</h1>
+                </div>
+                <div class="w-detail-text">
+                    <p>If you want to stay focused for a long time to coding, try this tool right now!. This tool is
+                        designed by me to optimize for programmers, coder, developers but if you don't, no worries you
+                        still use it normally. Please try it out and give me more opinions!</p>
+                </div>
+                <div onclick="clickToChange('https://phuongtiger.github.io/Pomodoro-tools/')" class="w-detail-button">
+                    <button>Try this tool</button>
+                </div>
+            </div>
+        </div>
+        <!-- Blog -->
+        <div class="container-blog">
+            <div class="blog">
+                <h1>Blog</h1>
+                <h2>Blog</h2>
+                <h3>Read My Blog</h3>
+            </div>
+            <div class="blog-nav">
+                <div class="b-button-prev">
+                    <img src="./assets/icon/back.png" alt="">
+                </div>
+                <div class="b-button-next">
+                    <img src="./assets/icon/next.png" alt="">
+                </div>
+            </div>
+            <div class="blog-head">
+                <h1>My Blog</h1>
+            </div>
+            <div class="blog-main">
+                <div class="b-box-list">
+                    <div class="b-box-item">
+                        <div class="b-item-img">
+                            <img src="./assets/img/algorithm.jpg" alt="">
+                            <span>3, June 2023</span>
+                            <div class="b-item-overlay"></div>
+                        </div>
+                        <div class="b-item-text">
+                            <h2>Thuật toán giúp coder như thế nào?</h2>
+                            <p>Chắc hẳn ai trong chúng ta, khi còn trong ghế nhà trường cũng một lần được học môn <a>cấu
+                                    trúc dữ liệu và giải thuật</a> nhưng không biết học nó để làm cái vẹo gì, trong bài
+                                chia sẻ này mình sẽ giúp các bạn hiểu về bộ môn "bú đá" này để có thêm động lực theo
+                                đuổi ngành này tốt hen nhé!</p>
+                        </div>
+                    </div>
+                    <div class="b-box-item">
+                        <div class="b-item-img">
+                            <img src="./assets/img/japanese.jpg" alt="">
+                            <span>7, June 2023</span>
+                            <div class="b-item-overlay"></div>
+                        </div>
+                        <div class="b-item-text">
+                            <h2>Tiếng nhật cho lập trình viên là thứ trừu tượng</h2>
+                            <p>Học một ngôn ngữ mới là thứ gì đó khó khăn đối với những người não chỉ có chất code như
+                                ae chúng ta, việc nhồi nhét một ngôn ngữ mới nhằm tìm kiếm cơ hội từ những nước phát
+                                triển là một điều hiển nhiên. Ở đây, là tiếng nhật, cũng là ngôn ngữ mình được học trong
+                                trường và cũng là phần mềm làm ra cho người khác xài chứ không phải mình =D</p>
+                        </div>
+                    </div>
+                    <div class="b-box-item">
+                        <div class="b-item-img">
+                            <img src="./assets/img/coder.jpg" alt="">
+                            <span>2, June 2023</span>
+                            <div class="b-item-overlay"></div>
+                        </div>
+                        <div class="b-item-text">
+                            <h2>Tại sao ai cũng nên học code?</h2>
+                            <p>Hiện nay có rất nhiều ngôn ngữ lập trình giúp ích rất nhiều cho các ngành nghề đặc thù
+                                khác nhau mà không phải ai cũng biết sức mạnh đáng gờm của chúng. Việc bắt một con cá
+                                biết bơi đi học leo cây cũng là một vấn đề nan giải nhưng làm được điều đó lại tạo ra
+                                khác biệt rất lớn. Qua bài chia sẻ này mình sẽ chia sẻ tip học những ngôn ngữ lập trình
+                                và cách ứng dụng của nó vào công việc của các bạn ngay cả khi các bạn không theo ngành
+                                lập trình.</p>
+                        </div>
+                    </div>
+                    <div class="b-box-item">
+                        <div class="b-item-img">
+                            <img src="./assets/img/coder.jpg" alt="">
+                            <span>2, June 2023</span>
+                            <div class="b-item-overlay"></div>
+                        </div>
+                        <div class="b-item-text">
+                            <h2>Tại sao ai cũng nên học code?</h2>
+                            <p>Hiện nay có rất nhiều ngôn ngữ lập trình giúp ích rất nhiều cho các ngành nghề đặc thù
+                                khác nhau mà không phải ai cũng biết sức mạnh đáng gờm của chúng. Việc bắt một con cá
+                                biết bơi đi học leo cây cũng là một vấn đề nan giải nhưng làm được điều đó lại tạo ra
+                                khác biệt rất lớn. Qua bài chia sẻ này mình sẽ chia sẻ tip học những ngôn ngữ lập trình
+                                và cách ứng dụng của nó vào công việc của các bạn ngay cả khi các bạn không theo ngành
+                                lập trình.</p>
+                        </div>
+                    </div>
+                    <div class="b-box-item">
+                        <div class="b-item-img">
+                            <img src="./assets/img/coder.jpg" alt="">
+                            <span>2, June 2023</span>
+                            <div class="b-item-overlay"></div>
+                        </div>
+                        <div class="b-item-text">
+                            <h2>Tại sao ai cũng nên học code?</h2>
+                            <p>Hiện nay có rất nhiều ngôn ngữ lập trình giúp ích rất nhiều cho các ngành nghề đặc thù
+                                khác nhau mà không phải ai cũng biết sức mạnh đáng gờm của chúng. Việc bắt một con cá
+                                biết bơi đi học leo cây cũng là một vấn đề nan giải nhưng làm được điều đó lại tạo ra
+                                khác biệt rất lớn. Qua bài chia sẻ này mình sẽ chia sẻ tip học những ngôn ngữ lập trình
+                                và cách ứng dụng của nó vào công việc của các bạn ngay cả khi các bạn không theo ngành
+                                lập trình.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id="footer">
             <div class="container-footer">
                 <div class="footer-box">
                     <div class="box-1">
                         <h2>Let's Talk</h2>
-                        <p>A person who passionate about technology pursuing the programming.</p>
+                        <p>Please contact in this info below</p>
+                        <p>My phone number:</p>
+                        <p>
+                            <a href="">+84 0326776754</a>
+                        </p>
+                        <p>My email address:</p>
                         <p>
                             <a href="">hhphuong465@gmail.com</a>
                         </p>
@@ -179,13 +322,14 @@
                 </div>
                 <div class="footer-box">
                     <div class="box-2">
-                        <h2>Lasted Blog</h2>
+                        <h2>Last Thing</h2>
+                        <p>I just want thanks you all of you guys visited my website</p>
                     </div>
                 </div>
                 <div class="footer-box">
                     <div class="box-3">
                         <h2>Newsletter</h2>
-                        <p>A person who passionate about technology pursuing the programming with the dream of creating value.</p>
+                        <p>If you want to contact with me quickly! Please send me your email</p>
                         <div class="subscribe">
                             <input type="text" placeholder="Enter Email address" class="text-form">
                             <input type="submit" value="Subscribe" class="submit">
@@ -193,11 +337,12 @@
                     </div>
                 </div>
             </div>
-            <p>© Copyright © 2023 All rights reserved | This template is made with <a href="">PhuongTiger</a> <3 </p>
+            <p>© Copyright © 2023 All rights reserved | This template is made by <a href="">PhuongTiger</a>
+                <3 </p>
         </div>
         <div class="button-scrolling">
             <div class="button">
-                <img src="./assets/img/up-arrows.png" alt="" onclick="scrollToTop()">
+                <img src="./assets/icon/up-arrows.png" alt="" onclick="scrollToTop()">
             </div>
         </div>
     </div>
